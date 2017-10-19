@@ -17,11 +17,6 @@ function timerCheck(){
 		document.getElementById("play").innerHTML = "Reiniciar";
 		var x = 0;
 		deck = ["blue","blue","brown","brown","green","green"];
-		while( x < 20){
-			document.getElementById(x.toString()).style.display = "none";
-			document.getElementById(x.toString()).src="images/back.png";
-			x++
-		}
 		playGame(x,y);	
 	}
 }
@@ -120,6 +115,15 @@ function flipCard(id){
 }
 function winner(){
 	window.alert("¡Enhorabuena! Has ganado la partida");
+	var x = 0;
+	var y = 0
+	while(x < 10){
+		y = x+10;
+		flipBack(x.toString(),y.toString());
+		document.getElementById(x.toString()).style.display = "none";
+		document.getElementById(y.toString()).style.display = "none";
+		x++;
+	}
 }
 function flipBack(id1,id2){
 	document.getElementById(id1).src="images/back.png";
