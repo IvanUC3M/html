@@ -6,3 +6,9 @@ img{
 	height: 5%;
 	display: none;
 }
+body{
+	border-style: dotted solid;
+	border-width: 1.5px;
+	border-radius: 10px;
+	padding-left: 15px;
+}
