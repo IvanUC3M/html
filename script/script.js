@@ -19,6 +19,11 @@ $(document).ready(function(){
 	$("#play").click(function(){
 		var N = $("#images").val();
 		timer = $("#timer").val();
+		//Comprobamos que el tiempo esta en los parametros establecidos:
+		if(timer < 10 || timer > 120){
+			alert("Introduce un tiempo entre 10 y 120 segundos");
+			return;
+		}
 		$("#play").text("Reiniciar");
 		//Removemos imagenes y valores de anteriores partidas:
 		$( "img" ).remove();
@@ -28,12 +33,6 @@ $(document).ready(function(){
 		$( ".time" ).remove();
 		$( ".timer" ).remove();
 		clearInterval(interval);
-		
-		//Comprobamos que el tiempo esta en los parametros establecidos:
-		if(timer < 10 || timer > 120){
-			alert("Introduce un tiempo entre 10 y 120 segundos");
-			return;
-		}
 		var x = 0;
 		deck.length = 0;
 		
