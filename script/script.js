@@ -27,6 +27,7 @@ $(document).ready(function(){
 		$( ".par" ).remove();
 		$( ".time" ).remove();
 		$( ".timer" ).remove();
+		clearInterval(interval);
 		
 		//Comprobamos que el tiempo esta en los parametros establecidos:
 		if(timer < 10 || timer > 120){
