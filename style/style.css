@@ -4,11 +4,13 @@ input[type=number]{
 img{
 	width: 5%;
 	height: 5%;
-	display: none;
 }
 body{
 	border-style: dotted solid;
 	border-width: 1.5px;
 	border-radius: 10px;
 	padding-left: 15px;
+}
+.aciertos,.timer{
+	width: 3%;
 }
